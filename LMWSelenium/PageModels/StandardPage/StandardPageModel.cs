@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
@@ -20,9 +21,12 @@ namespace LMWSelenium.PageModels.StandardPage
 
 		public IWebElement FindElementById(IWebDriver driver, string id)
 		{
+			IWebElement ReturnElement;
+
+
 			try
 			{
-				IWebElement ReturnElement = driver.FindElement(By.Id(id));
+				ReturnElement = driver.FindElement(By.Id(id));
 			}
 			catch (Exception)
 			{
@@ -31,9 +35,32 @@ namespace LMWSelenium.PageModels.StandardPage
 			}
 			
 
-			return null;
+			return ReturnElement;
+		}
+
+		public void SmokeTestLogic(IWebDriver driver)
+		{
+			NavigateToPage(driver, "https://www.lewiswhittard.co.uk");
+			AssertAreEqual(driver.Title, "Home Page - Lewis Whittard Software Development");
+			NavigateToPage(driver, "https://www.lewiswhittard.co.uk/search");
+			AssertAreEqual(driver.Title, "Search - Lewis Whittard Software Development");
+			NavigateToPage(driver, "https://lewiswhittard.co.uk/Search/Modified");
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+			NavigateToPage(driver, "https://lewiswhittard.co.uk/PortfolioPiece?Id=0");
+			AssertAreEqual(driver.Title, "Portfolio Piece - Lewis Whittard Software Development");
+			CloseDriver(driver);
+		}
+
+		public void CloseDriver(IWebDriver driver)
+		{
+			driver.Close();
 		}
 		
+		public void AssertAreEqual(string valueOne, string valueTwo)
+		{
+			Assert.AreEqual(valueOne, valueTwo);
+		}
+
 		public void ClickButton(IWebElement button)
 		{
 			button.Click();

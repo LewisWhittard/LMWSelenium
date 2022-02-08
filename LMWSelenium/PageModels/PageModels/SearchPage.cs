@@ -18,7 +18,7 @@ namespace LMWSelenium.PageModels.PageModels
 		IWebElement SearchButton { get; set; }
 		IWebElement ProgrammingTickBox { get; set; }
 		IWebElement TestingTickBox { get; set; }
-		IWebElement GamingTickBox { get; set; }
+		IWebElement GamesTickBox { get; set; }
 		IWebElement ThreeDAssetsTickBox { get; set; }
 		IWebElement TwoDAssetsTickBox { get; set; }
 		IWebElement BlogTickBox { get; set; }
@@ -26,6 +26,12 @@ namespace LMWSelenium.PageModels.PageModels
 		public SearchPage(IWebDriver driver)
 		{
 			SearchBox = FindElementById(driver, "Search");
+			SearchButton = FindElementById(driver, "SearchButton");
+			ProgrammingTickBox = FindElementById(driver, "Programming");
+			TestingTickBox = FindElementById(driver, "Testing");
+			GamesTickBox = FindElementById(driver, "Games");
+
+
 		}
 		
 		public SearchPage()
@@ -33,7 +39,7 @@ namespace LMWSelenium.PageModels.PageModels
 
 		}
 
-		private class TickBoxResultsModel()
+		
 
 	}
 }

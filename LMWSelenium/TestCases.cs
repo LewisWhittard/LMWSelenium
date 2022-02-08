@@ -6,6 +6,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Safari;
 using LMWSelenium.PageModels.PageModels;
+using LMWSelenium.PageModels.StandardPage;
 
 namespace LMWSelenium
 {
@@ -16,52 +17,43 @@ namespace LMWSelenium
 		[Test]
 		public void SmokeTestChrome()
 		{
+			StandardPageModel Model = new StandardPageModel();
+			
 			Driver = new ChromeDriver();
 
-			SmokeTestLogic(Driver);
+			Model.SmokeTestLogic(Driver);
 
 		}
 
 		[Test]
 		public void SmokeTestEdge()
 		{
+			StandardPageModel Model = new StandardPageModel();
+
+
 			Driver = new EdgeDriver();
 
-			SmokeTestLogic(Driver);
+			Model.SmokeTestLogic(Driver);
 
 		}
 
 		[Test]
 		public void SmokeTestFirefox()
 		{
+			StandardPageModel Model = new StandardPageModel();
+
 			Driver = new FirefoxDriver();
 
-			SmokeTestLogic(Driver);
+			Model.SmokeTestLogic(Driver);
 
 		}
 
 		[Test]
 		public void SmokeTestSafari()
-		{
+		{StandardPageModel Model = new StandardPageModel();
 			Driver = new SafariDriver();
-
-			SmokeTestLogic(Driver);
-
-		}
-
-		public void SmokeTestLogic(IWebDriver driver)
-		{
-			Driver.Navigate().GoToUrl("https://www.lewiswhittard.co.uk");
-			Assert.AreEqual(Driver.Title, "Home Page - Lewis Whittard Software Development");
-
-			Driver.Navigate().GoToUrl("https://www.lewiswhittard.co.uk/search");
-			Assert.AreEqual(Driver.Title, "Index - Lewis Whittard Software Development");
-
-			Driver.Navigate().GoToUrl("https://www.lewiswhittard.co.uk/Search/Modified");
-			Assert.AreEqual(Driver.Title, "Index - Lewis Whittard Software Development");
-
-			Driver.Navigate().GoToUrl("https://www.lewiswhittard.co.uk/PortfolioPiece?Id=0");
-			Assert.AreEqual(Driver.Title, "Index - Lewis Whittard Software Development");
+			
+			Model.SmokeTestLogic(Driver);
 		}
 
 	}
@@ -71,11 +63,17 @@ namespace LMWSelenium
 		IWebDriver Driver;
 
 		[Test]
-		public void HomePageProgrammingButtonTest()
+		public void HomePageNavBarSearchButtonTest()
 		{
 			Driver = new ChromeDriver();
 
-			HomePage Page = new HomePage();
+			HomePage Home = new HomePage(Driver);
+
+			Home.TestSearchNavBarButton(Driver);
+
+			SearchPage Search = new SearchPage();
+			
+
 
 		}
 
