@@ -28,18 +28,86 @@ namespace LMWSelenium.PageModels.PageModels
 			SearchBox = FindElementById(driver, "Search");
 			SearchButton = FindElementById(driver, "SearchButton");
 			ProgrammingTickBox = FindElementById(driver, "Programming");
+			TwoDAssetsTickBox = FindElementById(driver, "TwoDAssets");
+			ThreeDAssetsTickBox = FindElementById(driver, "ThreeDAssets");
 			TestingTickBox = FindElementById(driver, "Testing");
 			GamesTickBox = FindElementById(driver, "Games");
+			BlogTickBox = FindElementById(driver, "Blog");
 
 
 		}
 		
-		public SearchPage()
+		public void CheckSearchButtonPost()
 		{
+			CheckTickBoxValueIsTrue(ProgrammingTickBox);
+			CheckTickBoxValueIsTrue(TestingTickBox);
+			CheckTickBoxValueIsTrue(GamesTickBox);
+			CheckTickBoxValueIsTrue(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsTrue(TwoDAssetsTickBox);
+			CheckTickBoxValueIsTrue(BlogTickBox);
+		}
+
+		public void CheckProgrammingButtonPost()
+		{
+			CheckTickBoxValueIsTrue(ProgrammingTickBox);
+			CheckTickBoxValueIsFalse(TestingTickBox);
+			CheckTickBoxValueIsFalse(GamesTickBox);
+			CheckTickBoxValueIsFalse(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsFalse(TwoDAssetsTickBox);
+			CheckTickBoxValueIsFalse(BlogTickBox);
 
 		}
 
-		
+		public void CheckTestingButtonPost()
+		{
+			CheckTickBoxValueIsFalse(ProgrammingTickBox);
+			CheckTickBoxValueIsTrue(TestingTickBox);
+			CheckTickBoxValueIsFalse(GamesTickBox);
+			CheckTickBoxValueIsFalse(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsFalse(TwoDAssetsTickBox);
+			CheckTickBoxValueIsFalse(BlogTickBox);
+		}
+
+		public void CheckGamesButtonPost()
+		{
+			CheckTickBoxValueIsFalse(ProgrammingTickBox);
+			CheckTickBoxValueIsFalse(TestingTickBox);
+			CheckTickBoxValueIsTrue(GamesTickBox);
+			CheckTickBoxValueIsFalse(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsFalse(TwoDAssetsTickBox);
+			CheckTickBoxValueIsFalse(BlogTickBox);
+		}
+
+		public void CheckThreeDButtonPost()
+		{
+			CheckTickBoxValueIsFalse(ProgrammingTickBox);
+			CheckTickBoxValueIsFalse(TestingTickBox);
+			CheckTickBoxValueIsFalse(GamesTickBox);
+			CheckTickBoxValueIsTrue(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsFalse(TwoDAssetsTickBox);
+			CheckTickBoxValueIsFalse(BlogTickBox);
+		}
+
+		public void CheckTwoDButtonPost()
+		{
+			CheckTickBoxValueIsFalse(ProgrammingTickBox);
+			CheckTickBoxValueIsFalse(TestingTickBox);
+			CheckTickBoxValueIsFalse(GamesTickBox);
+			CheckTickBoxValueIsFalse(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsTrue(TwoDAssetsTickBox);
+			CheckTickBoxValueIsFalse(BlogTickBox);
+		}
+
+		public void BlogButtonPost()
+		{
+			CheckTickBoxValueIsFalse(ProgrammingTickBox);
+			CheckTickBoxValueIsFalse(TestingTickBox);
+			CheckTickBoxValueIsFalse(GamesTickBox);
+			CheckTickBoxValueIsFalse(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsFalse(TwoDAssetsTickBox);
+			CheckTickBoxValueIsTrue(BlogTickBox);
+		}
+
 
 	}
 }

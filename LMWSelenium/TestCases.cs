@@ -7,6 +7,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Safari;
 using LMWSelenium.PageModels.PageModels;
 using LMWSelenium.PageModels.StandardPage;
+using System.Collections.Generic;
 
 namespace LMWSelenium
 {
@@ -62,8 +63,10 @@ namespace LMWSelenium
 	{
 		IWebDriver Driver;
 
+		#region Chrome
+
 		[Test]
-		public void HomePageNavBarSearchButtonTest()
+		public void HomePageNavBarSearchButtonTestChrome()
 		{
 			Driver = new ChromeDriver();
 
@@ -71,12 +74,121 @@ namespace LMWSelenium
 
 			Home.TestSearchNavBarButton(Driver);
 
-			SearchPage Search = new SearchPage();
+			SearchPage Search = new SearchPage(Driver);
+
+			Search.CheckSearchButtonPost();
+
+			Driver.Close();
+
+		}
+
+		[Test]
+		public void HomePageNavBarHomeButtonTestChrome()
+		{
+			Driver = new ChromeDriver();
+
+			HomePage Home = new HomePage(Driver);
+
+			Home.TestSearchNavBarButton(Driver);
+
+			Driver.Close();
+
+		}
+
+		[Test]
+		public void HomePageOverlayProgrammingButtonChrome()
+		{
 			
+			Driver = new ChromeDriver();
+			
+			HomePage Home = new HomePage(Driver);
+			Home.TestProgrammingButton(Driver);
+
+			SearchPage Search = new SearchPage(Driver);
+			Search.CheckProgrammingButtonPost();
+
+			Driver.Close();
 
 
 		}
 
-		
+		[Test]
+		public void HomePageOverlayTestButtonChrome()
+		{
+
+			Driver = new ChromeDriver();
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestTestButton(Driver);
+
+			SearchPage Search = new SearchPage(Driver);
+			Search.CheckTestingButtonPost();
+
+			Driver.Close();
+		}
+
+		[Test]
+		public void HomePageOverlayGamesButtonChrome()
+		{
+
+			Driver = new ChromeDriver();
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestGamesButton(Driver);
+
+			SearchPage Search = new SearchPage(Driver);
+			Search.CheckGamesButtonPost();
+
+			Driver.Close();
+		}
+
+		[Test]
+		public void HomePageOverlayTwoDAssetsButtonChrome()
+		{
+
+			Driver = new ChromeDriver();
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestTwoDAssetsButton(Driver);
+
+			SearchPage Search = new SearchPage(Driver);
+			Search.CheckTwoDButtonPost();
+
+			Driver.Close();
+		}
+
+		[Test]
+		public void HomePageOverlayThreeDAssetsButtonChrome()
+		{
+
+			Driver = new ChromeDriver();
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestThreeDAssetsButton(Driver);
+
+			SearchPage Search = new SearchPage(Driver);
+			Search.CheckThreeDButtonPost();
+
+			Driver.Close();
+		}
+
+		[Test]
+		public void HomePageOverlayBlogButtonChrome()
+		{
+
+			Driver = new ChromeDriver();
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestBlogButton(Driver);
+
+			SearchPage Search = new SearchPage(Driver);
+			Search.BlogButtonPost();
+
+			Driver.Close();
+		}
+
+
+		#endregion
+
 	}
 }

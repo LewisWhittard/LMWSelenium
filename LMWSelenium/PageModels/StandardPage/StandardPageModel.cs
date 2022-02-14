@@ -66,9 +66,20 @@ namespace LMWSelenium.PageModels.StandardPage
 			button.Click();
 		}
 
-		public string CheckTickBoxValue(IWebElement tickbox)
+		public string CheckTickBoxValueIsTrue(IWebElement tickbox)
 		{
 			string TickboxValue = tickbox.GetAttribute("checked");
+
+			AssertAreEqual(TickboxValue, "true");
+
+			return TickboxValue;
+		}
+
+		public string CheckTickBoxValueIsFalse(IWebElement tickbox)
+		{
+			string TickboxValue = tickbox.GetAttribute("checked");
+
+			AssertAreEqual(TickboxValue, null);
 
 			return TickboxValue;
 		}

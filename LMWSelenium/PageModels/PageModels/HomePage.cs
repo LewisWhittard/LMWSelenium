@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Safari;
+//using OpenQA.Selenium.Chrome;
+//using OpenQA.Selenium.Edge;
+//using OpenQA.Selenium.Firefox;
+//using OpenQA.Selenium.Safari;
 using LMWSelenium.PageModels.StandardPage;
-using NUnit.Framework;
+//using NUnit.Framework;
 
 namespace LMWSelenium.PageModels.PageModels
 {
@@ -37,10 +37,54 @@ namespace LMWSelenium.PageModels.PageModels
 			BlogButton = FindElementById(driver, "BlogButton");
 		}
 
+		public void TestHomeNavBarButton(IWebDriver driver)
+		{
+			ClickButton(HomeNavBarButton);
+			AssertAreEqual(driver.Title, "Home Page - Lewis Whittard Software Development");
+		}
+
 		public void TestSearchNavBarButton(IWebDriver driver)
 		{
 			ClickButton(SearchNavBarButton);
-			Assert.AreEqual(driver.Title, "Search - Lewis Whittard Software Development");
+			AssertAreEqual(driver.Title, "Search - Lewis Whittard Software Development");
+			
+		}
+
+		public void TestProgrammingButton(IWebDriver driver)
+		{
+			ClickButton(ProgrammingButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+
+		}
+
+		public void TestTestButton(IWebDriver driver)
+		{
+			ClickButton(TestingButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
+		public void TestGamesButton(IWebDriver driver)
+		{
+			ClickButton(GamesButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
+		public void TestTwoDAssetsButton(IWebDriver driver)
+		{
+			ClickButton(TwoDBAssetsButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
+		public void TestThreeDAssetsButton(IWebDriver driver)
+		{
+			ClickButton(ThreeDAssetsButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
+		public void TestBlogButton(IWebDriver driver)
+		{
+			ClickButton(BlogButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 	}
