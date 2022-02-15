@@ -70,6 +70,10 @@ namespace LMWSelenium
 		{
 			Driver = new ChromeDriver();
 
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
 			HomePage Home = new HomePage(Driver);
 
 			Home.TestSearchNavBarButton(Driver);
@@ -87,6 +91,10 @@ namespace LMWSelenium
 		{
 			Driver = new ChromeDriver();
 
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
 			HomePage Home = new HomePage(Driver);
 
 			Home.TestSearchNavBarButton(Driver);
@@ -100,7 +108,11 @@ namespace LMWSelenium
 		{
 			
 			Driver = new ChromeDriver();
-			
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
 			HomePage Home = new HomePage(Driver);
 			Home.TestProgrammingButton(Driver);
 
@@ -118,6 +130,10 @@ namespace LMWSelenium
 
 			Driver = new ChromeDriver();
 
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
 			HomePage Home = new HomePage(Driver);
 			Home.TestTestButton(Driver);
 
@@ -132,6 +148,10 @@ namespace LMWSelenium
 		{
 
 			Driver = new ChromeDriver();
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
 
 			HomePage Home = new HomePage(Driver);
 			Home.TestGamesButton(Driver);
@@ -148,6 +168,10 @@ namespace LMWSelenium
 
 			Driver = new ChromeDriver();
 
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
 			HomePage Home = new HomePage(Driver);
 			Home.TestTwoDAssetsButton(Driver);
 
@@ -163,6 +187,10 @@ namespace LMWSelenium
 
 			Driver = new ChromeDriver();
 
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
 			HomePage Home = new HomePage(Driver);
 			Home.TestThreeDAssetsButton(Driver);
 
@@ -177,6 +205,10 @@ namespace LMWSelenium
 		{
 
 			Driver = new ChromeDriver();
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
 
 			HomePage Home = new HomePage(Driver);
 			Home.TestBlogButton(Driver);

@@ -26,7 +26,6 @@ namespace LMWSelenium.PageModels.PageModels
 
 		public HomePage(IWebDriver driver)
 		{
-			NavigateToPage(driver, "https://www.lewiswhittard.co.uk");
 			HomeNavBarButton = FindElementById(driver, "HomeNavBarButton");
 			SearchNavBarButton = FindElementById(driver, "SearchNavBarButton");
 			ProgrammingButton = FindElementById(driver, "ProgrammingButton");
