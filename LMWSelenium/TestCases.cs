@@ -19,7 +19,7 @@ namespace LMWSelenium
 		public void SmokeTestChrome()
 		{
 			StandardPageModel Model = new StandardPageModel();
-			
+
 			Driver = new ChromeDriver();
 
 			Model.SmokeTestLogic(Driver);
@@ -51,9 +51,9 @@ namespace LMWSelenium
 
 		[Test]
 		public void SmokeTestSafari()
-		{StandardPageModel Model = new StandardPageModel();
+		{ StandardPageModel Model = new StandardPageModel();
 			Driver = new SafariDriver();
-			
+
 			Model.SmokeTestLogic(Driver);
 		}
 
@@ -106,7 +106,7 @@ namespace LMWSelenium
 		[Test]
 		public void HomePageOverlayProgrammingButtonChrome()
 		{
-			
+
 			Driver = new ChromeDriver();
 
 			StandardPageModel PageModel = new StandardPageModel();
@@ -221,6 +221,76 @@ namespace LMWSelenium
 
 
 		#endregion
+
+	}
+
+	public class SearchPageTests
+	{
+		IWebDriver Driver;
+
+		[Test]
+		public void TestSearchFunctionAndTickboxAllFalseNoResultChrome()
+		{
+			Driver = new ChromeDriver();
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/search");
+
+			SearchPage Search = new SearchPage(Driver);
+
+			Search.SearchTestAllTickBoxesFalse(Driver);
+
+			SearchPage SearchModified = new SearchPage(Driver);
+
+			SearchModified.SearchTestAllTickBoxesFalsePost(Driver);
+
+			Driver.Close();
+
+		}
+
+		[Test]
+		public void TestSearchFunctionAndTickboxAllTrueNoResultChrome()
+		{
+			Driver = new ChromeDriver();
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/search");
+
+			SearchPage Search = new SearchPage(Driver);
+
+			Search.SearchTestAllTickBoxesTrueNoResult(Driver);
+
+			SearchPage SearchModified = new SearchPage(Driver);
+
+			SearchModified.SearchTestAllTicketBoxesTrueNoResultPost(Driver);
+
+			Driver.Close();
+
+		}
+
+		[Test]
+		public void TestSearchFunctionResultChrome()
+		{
+			Driver = new ChromeDriver();
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/search");
+
+			SearchPage Search = new SearchPage(Driver);
+
+			Search.SearchTestAllTickBoxesTrueResult(Driver);
+
+			SearchPage SearchModified = new SearchPage(Driver);
+
+			SearchModified.SearchTestAllTickBoxesTrueResultPost(Driver);
+
+			Driver.Close();
+
+		}
+
 
 	}
 }

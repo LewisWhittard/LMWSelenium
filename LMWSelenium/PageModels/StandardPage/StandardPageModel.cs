@@ -38,6 +38,32 @@ namespace LMWSelenium.PageModels.StandardPage
 			return ReturnElement;
 		}
 
+		public void DontFindElementById(IWebDriver driver, string id)
+		{
+			IWebElement ReturnElement = null;
+
+
+
+			try
+			{
+				ReturnElement = driver.FindElement(By.Id(id));
+			}
+			catch (Exception)
+			{
+
+				
+			}
+			
+			if (ReturnElement != null)
+				{
+					throw new InvalidOperationException("Failed Found Button");
+				}
+
+
+
+			
+		}
+
 		public void SmokeTestLogic(IWebDriver driver)
 		{
 			NavigateToPage(driver, "https://www.lewiswhittard.co.uk");
@@ -82,6 +108,11 @@ namespace LMWSelenium.PageModels.StandardPage
 			AssertAreEqual(TickboxValue, null);
 
 			return TickboxValue;
+		}
+
+		public void SendTextToInput(IWebElement Target, string String)
+		{
+			Target.SendKeys(String);
 		}
 
 	}

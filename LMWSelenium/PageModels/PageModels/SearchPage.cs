@@ -47,6 +47,16 @@ namespace LMWSelenium.PageModels.PageModels
 			CheckTickBoxValueIsTrue(BlogTickBox);
 		}
 
+		public void CheckAllTickboxValuesAreFalse()
+		{
+			CheckTickBoxValueIsFalse(ProgrammingTickBox);
+			CheckTickBoxValueIsFalse(TestingTickBox);
+			CheckTickBoxValueIsFalse(GamesTickBox);
+			CheckTickBoxValueIsFalse(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsFalse(TwoDAssetsTickBox);
+			CheckTickBoxValueIsFalse(BlogTickBox);
+		}
+
 		public void CheckProgrammingButtonPost()
 		{
 			CheckTickBoxValueIsTrue(ProgrammingTickBox);
@@ -108,6 +118,64 @@ namespace LMWSelenium.PageModels.PageModels
 			CheckTickBoxValueIsTrue(BlogTickBox);
 		}
 
+		public void SearchTestAllTickBoxesTrueResult(IWebDriver driver)
+		{
+			SendTextToInput(SearchBox, "Part 1 of My Portfolio Completed!");
+			CheckSearchButtonPost();
+			ClickButton(SearchButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
+		public void SearchTestAllTickBoxesTrueResultPost(IWebDriver driver)
+		{
+			CheckSearchButtonPost();
+			IWebElement ResultButton = FindElementById(driver, "0Button");
+			ClickButton(ResultButton);
+			AssertAreEqual(driver.Title, "Portfolio Piece - Lewis Whittard Software Development");
+
+		}
+
+
+
+		public void SearchTestAllTickBoxesTrueNoResult(IWebDriver driver)
+		{
+			CheckSearchButtonPost();
+			SendTextToInput(SearchBox, "no result");
+			ClickButton(SearchButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+			
+			
+
+		}
+
+		public void SearchTestAllTicketBoxesTrueNoResultPost(IWebDriver driver)
+		{
+			CheckSearchButtonPost();
+			AssertAreEqual(SearchBox.GetAttribute("value"), "no result");
+			DontFindElementById(driver, "0Button");
+		}
+
+		public void SearchTestAllTickBoxesFalse(IWebDriver driver)
+		{
+			SendTextToInput(SearchBox, "Part 1 of My Portfolio Completed!");
+			ClickButton(ProgrammingTickBox);
+			ClickButton(TestingTickBox);
+			ClickButton(GamesTickBox);
+			ClickButton(ThreeDAssetsTickBox);
+			ClickButton(TwoDAssetsTickBox);
+			ClickButton(BlogTickBox);
+			ClickButton(SearchButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
+		public void SearchTestAllTickBoxesFalsePost(IWebDriver driver)
+		{
+			CheckAllTickboxValuesAreFalse();
+			AssertAreEqual(SearchBox.GetAttribute("value"), "Part 1 of My Portfolio Completed!");
+			DontFindElementById(driver, "0Button");
+		}
+
+		
 
 	}
 }
