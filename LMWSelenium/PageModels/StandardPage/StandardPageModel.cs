@@ -115,5 +115,10 @@ namespace LMWSelenium.PageModels.StandardPage
 			Target.SendKeys(String);
 		}
 
+		public void SwitchTab(IWebDriver driver, int Tab)
+		{
+			driver.SwitchTo().Window(driver.WindowHandles[Tab]);
+		}
+
 	}
 }

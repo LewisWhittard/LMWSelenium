@@ -219,6 +219,35 @@ namespace LMWSelenium
 			Driver.Close();
 		}
 
+		[Test]
+		public void HomeLogoButtonChrome()
+		{
+
+			Driver = new ChromeDriver();
+
+			StandardPageModel PageModel = new StandardPageModel();
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestLogoButton(Driver);
+			Driver.Close();
+		}
+
+		[Test]
+		public void HomelinkedinButtonChrome()
+		{
+			Driver = new ChromeDriver();
+			
+			StandardPageModel PageModel = new StandardPageModel();
+
+
+
+			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+			HomePage Home = new HomePage(Driver);
+			Home.TestLinkedinButton(Driver);
+		}
 
 		#endregion
 

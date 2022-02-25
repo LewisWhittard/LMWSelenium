@@ -22,6 +22,8 @@ namespace LMWSelenium.PageModels.PageModels
 		IWebElement ThreeDAssetsTickBox { get; set; }
 		IWebElement TwoDAssetsTickBox { get; set; }
 		IWebElement BlogTickBox { get; set; }
+		IWebElement LMWLogo { get; set; }
+		IWebElement linkedin { get; set; }
 
 		public SearchPage(IWebDriver driver)
 		{
@@ -33,7 +35,8 @@ namespace LMWSelenium.PageModels.PageModels
 			TestingTickBox = FindElementById(driver, "Testing");
 			GamesTickBox = FindElementById(driver, "Games");
 			BlogTickBox = FindElementById(driver, "Blog");
-
+			LMWLogo = FindElementById(driver, "LogoLink");
+			linkedin = FindElementById(driver, "Linkedin");
 
 		}
 		
