@@ -171,6 +171,19 @@ namespace LMWSelenium.PageModels.PageModels
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
+		public void SearchTestAllTickBoxesTrue(IWebDriver driver)
+		{
+			SendTextToInput(SearchBox, "Part 1 of My Portfolio Completed!");
+			ClickButton(ProgrammingTickBox);
+			ClickButton(TestingTickBox);
+			ClickButton(GamesTickBox);
+			ClickButton(ThreeDAssetsTickBox);
+			ClickButton(TwoDAssetsTickBox);
+			ClickButton(BlogTickBox);
+			ClickButton(SearchButton);
+			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
+		}
+
 		public void SearchTestAllTickBoxesFalsePost(IWebDriver driver)
 		{
 			CheckAllTickboxValuesAreFalse();
