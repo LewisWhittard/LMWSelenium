@@ -107,7 +107,6 @@ namespace LMWSelenium.PageModels.PageModels
 			AssertAreEqual(driver.Url, "https://www.linkedin.com/in/lewis-whittard-092167157/");
 			CloseDriver(driver);
 			SwitchTab(driver, 0);
-			CloseDriver(driver);
 
 		}
 

@@ -61,196 +61,582 @@ namespace LMWSelenium
 
 	public class HomePageTests
 	{
-		IWebDriver Driver;
-
-		#region Chrome
-
-		[Test]
-		public void HomePageNavBarSearchButtonTestChrome()
+		class Chrome
 		{
-			Driver = new ChromeDriver();
+			IWebDriver Driver;
 
-			StandardPageModel PageModel = new StandardPageModel();
+			[Test]
+			public void HomePageNavBarSearchButtonTest()
+			{
+				Driver = new ChromeDriver();
 
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				StandardPageModel PageModel = new StandardPageModel();
 
-			HomePage Home = new HomePage(Driver);
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
 
-			Home.TestSearchNavBarButton(Driver);
+				HomePage Home = new HomePage(Driver);
 
-			SearchPage Search = new SearchPage(Driver);
+				Home.TestSearchNavBarButton(Driver);
 
-			Search.CheckSearchButtonPost();
+				SearchPage Search = new SearchPage(Driver);
 
-			Driver.Close();
+				Search.CheckSearchButtonPost();
 
+				Driver.Close();
+
+			}
+
+			[Test]
+			public void HomePageNavBarHomeButtonTest()
+			{
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+
+				Home.TestSearchNavBarButton(Driver);
+
+				Driver.Close();
+
+			}
+
+			[Test]
+			public void HomePageOverlayProgrammingButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestProgrammingButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckProgrammingButtonPost();
+
+				Driver.Close();
+
+
+			}
+
+			[Test]
+			public void HomePageOverlayTestButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestTestButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckTestingButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayGamesButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestGamesButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckGamesButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayTwoDAssetsButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestTwoDAssetsButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckTwoDButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayThreeDAssetsButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestThreeDAssetsButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckThreeDButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayBlogButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestBlogButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.BlogButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomeLogoButton()
+			{
+
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestLogoButton(Driver);
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomelinkedinButton()
+			{
+				Driver = new ChromeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestLinkedinButton(Driver);
+
+				Driver.Close();
+			}
 		}
 
-		[Test]
-		public void HomePageNavBarHomeButtonTestChrome()
+		class Firefox
 		{
-			Driver = new ChromeDriver();
+			IWebDriver Driver;
 
-			StandardPageModel PageModel = new StandardPageModel();
+			[Test]
+			public void HomePageNavBarSearchButtonTest()
+			{
+				Driver = new FirefoxDriver();
 
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				StandardPageModel PageModel = new StandardPageModel();
 
-			HomePage Home = new HomePage(Driver);
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
 
-			Home.TestSearchNavBarButton(Driver);
+				HomePage Home = new HomePage(Driver);
 
-			Driver.Close();
+				Home.TestSearchNavBarButton(Driver);
 
+				SearchPage Search = new SearchPage(Driver);
+
+				Search.CheckSearchButtonPost();
+
+				Driver.Close();
+
+			}
+
+			[Test]
+			public void HomePageNavBarHomeButtonTest()
+			{
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+
+				Home.TestSearchNavBarButton(Driver);
+
+				Driver.Close();
+
+			}
+
+			[Test]
+			public void HomePageOverlayProgrammingButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestProgrammingButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckProgrammingButtonPost();
+
+				Driver.Close();
+
+
+			}
+
+			[Test]
+			public void HomePageOverlayTestButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestTestButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckTestingButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayGamesButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestGamesButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckGamesButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayTwoDAssetsButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestTwoDAssetsButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckTwoDButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayThreeDAssetsButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestThreeDAssetsButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckThreeDButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayBlogButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestBlogButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.BlogButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomeLogoButton()
+			{
+
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestLogoButton(Driver);
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomelinkedinButton()
+			{
+				Driver = new FirefoxDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestLinkedinButton(Driver);
+				Driver.Close();
+			}
 		}
 
-		[Test]
-		public void HomePageOverlayProgrammingButtonChrome()
+		class Edge
 		{
+			IWebDriver Driver;
 
-			Driver = new ChromeDriver();
+			[Test]
+			public void HomePageNavBarSearchButtonTest()
+			{
+				Driver = new EdgeDriver();
 
-			StandardPageModel PageModel = new StandardPageModel();
+				StandardPageModel PageModel = new StandardPageModel();
 
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
 
-			HomePage Home = new HomePage(Driver);
-			Home.TestProgrammingButton(Driver);
+				HomePage Home = new HomePage(Driver);
 
-			SearchPage Search = new SearchPage(Driver);
-			Search.CheckProgrammingButtonPost();
+				Home.TestSearchNavBarButton(Driver);
 
-			Driver.Close();
+				SearchPage Search = new SearchPage(Driver);
+
+				Search.CheckSearchButtonPost();
+
+				Driver.Close();
+
+			}
+
+			[Test]
+			public void HomePageNavBarHomeButtonTest()
+			{
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+
+				Home.TestSearchNavBarButton(Driver);
+
+				Driver.Close();
+
+			}
+
+			[Test]
+			public void HomePageOverlayProgrammingButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestProgrammingButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckProgrammingButtonPost();
+
+				Driver.Close();
 
 
+			}
+
+			[Test]
+			public void HomePageOverlayTestButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestTestButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckTestingButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayGamesButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestGamesButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckGamesButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayTwoDAssetsButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestTwoDAssetsButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckTwoDButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayThreeDAssetsButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestThreeDAssetsButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.CheckThreeDButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomePageOverlayBlogButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestBlogButton(Driver);
+
+				SearchPage Search = new SearchPage(Driver);
+				Search.BlogButtonPost();
+
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomeLogoButton()
+			{
+
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestLogoButton(Driver);
+				Driver.Close();
+			}
+
+			[Test]
+			public void HomelinkedinButton()
+			{
+				Driver = new EdgeDriver();
+
+				StandardPageModel PageModel = new StandardPageModel();
+
+
+
+				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+
+				HomePage Home = new HomePage(Driver);
+				Home.TestLinkedinButton(Driver);
+
+				Driver.Close();
+			}
 		}
 
-		[Test]
-		public void HomePageOverlayTestButtonChrome()
+		class safari
 		{
 
-			Driver = new ChromeDriver();
-
-			StandardPageModel PageModel = new StandardPageModel();
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestTestButton(Driver);
-
-			SearchPage Search = new SearchPage(Driver);
-			Search.CheckTestingButtonPost();
-
-			Driver.Close();
 		}
-
-		[Test]
-		public void HomePageOverlayGamesButtonChrome()
-		{
-
-			Driver = new ChromeDriver();
-
-			StandardPageModel PageModel = new StandardPageModel();
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestGamesButton(Driver);
-
-			SearchPage Search = new SearchPage(Driver);
-			Search.CheckGamesButtonPost();
-
-			Driver.Close();
-		}
-
-		[Test]
-		public void HomePageOverlayTwoDAssetsButtonChrome()
-		{
-
-			Driver = new ChromeDriver();
-
-			StandardPageModel PageModel = new StandardPageModel();
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestTwoDAssetsButton(Driver);
-
-			SearchPage Search = new SearchPage(Driver);
-			Search.CheckTwoDButtonPost();
-
-			Driver.Close();
-		}
-
-		[Test]
-		public void HomePageOverlayThreeDAssetsButtonChrome()
-		{
-
-			Driver = new ChromeDriver();
-
-			StandardPageModel PageModel = new StandardPageModel();
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestThreeDAssetsButton(Driver);
-
-			SearchPage Search = new SearchPage(Driver);
-			Search.CheckThreeDButtonPost();
-
-			Driver.Close();
-		}
-
-		[Test]
-		public void HomePageOverlayBlogButtonChrome()
-		{
-
-			Driver = new ChromeDriver();
-
-			StandardPageModel PageModel = new StandardPageModel();
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestBlogButton(Driver);
-
-			SearchPage Search = new SearchPage(Driver);
-			Search.BlogButtonPost();
-
-			Driver.Close();
-		}
-
-		[Test]
-		public void HomeLogoButtonChrome()
-		{
-
-			Driver = new ChromeDriver();
-
-			StandardPageModel PageModel = new StandardPageModel();
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestLogoButton(Driver);
-			Driver.Close();
-		}
-
-		[Test]
-		public void HomelinkedinButtonChrome()
-		{
-			Driver = new ChromeDriver();
-			
-			StandardPageModel PageModel = new StandardPageModel();
-
-
-
-			PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
-
-			HomePage Home = new HomePage(Driver);
-			Home.TestLinkedinButton(Driver);
-		}
-
-		#endregion
-
 	}
 
 	public class SearchPageTests
