@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -118,6 +119,22 @@ namespace LMWSelenium.PageModels.StandardPage
 		public void SwitchTab(IWebDriver driver, int Tab)
 		{
 			driver.SwitchTo().Window(driver.WindowHandles[Tab]);
+		}
+
+		public void Wait(int value)
+		{
+			Thread.Sleep(value);
+		}
+
+		public void AssertContains(string Value1,string Value2)
+		{
+			bool CheckValue = Value1.Contains(Value2);
+
+			if (CheckValue == false)
+			{
+				throw new InvalidOperationException("Does not Contain");
+			}
+			
 		}
 
 	}

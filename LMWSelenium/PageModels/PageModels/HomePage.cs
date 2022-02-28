@@ -100,14 +100,12 @@ namespace LMWSelenium.PageModels.PageModels
 
 		public void TestLinkedinButton(IWebDriver driver)
 		{
-
-
 			ClickButton(Linkedin);
 			SwitchTab(driver, 1);
-			AssertAreEqual(driver.Url, "https://www.linkedin.com/in/lewis-whittard-092167157/");
+			Wait(1000);
+			AssertContains(driver.Url, "https://www.linkedin.com/");
 			CloseDriver(driver);
 			SwitchTab(driver, 0);
-
 		}
 
 	}
