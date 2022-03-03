@@ -117,7 +117,7 @@ namespace LMWSelenium
 
 				HomePage Home = new HomePage(Driver);
 
-				Home.TestSearchNavBarButton(Driver);
+				Home.TestHomeNavBarButton(Driver);
 
 				Driver.Close();
 
@@ -308,7 +308,7 @@ namespace LMWSelenium
 
 				HomePage Home = new HomePage(Driver);
 
-				Home.TestSearchNavBarButton(Driver);
+				Home.TestHomeNavBarButton(Driver);
 
 				Driver.Close();
 
@@ -498,7 +498,7 @@ namespace LMWSelenium
 
 				HomePage Home = new HomePage(Driver);
 
-				Home.TestSearchNavBarButton(Driver);
+				Home.TestHomeNavBarButton(Driver);
 
 				Driver.Close();
 
@@ -689,7 +689,7 @@ namespace LMWSelenium
 
 				HomePage Home = new HomePage(Driver);
 
-				Home.TestSearchNavBarButton(Driver);
+				Home.TestHomeNavBarButton(Driver);
 
 				Driver.Quit();
 
