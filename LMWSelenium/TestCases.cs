@@ -1139,7 +1139,7 @@ namespace LMWSelenium
 
 				SearchModified.SearchTestAllTickBoxesFalsePost(Driver);
 
-				Driver.Close();
+				Driver.Quit();
 
 			}
 
@@ -1160,7 +1160,7 @@ namespace LMWSelenium
 
 				SearchModified.SearchTestAllTicketBoxesTrueNoResultPost(Driver);
 
-				Driver.Close();
+				Driver.Quit();
 
 			}
 
@@ -1181,7 +1181,7 @@ namespace LMWSelenium
 
 				SearchModified.SearchTestAllTickBoxesTrueResultPost(Driver);
 
-				Driver.Close();
+				Driver.Quit();
 
 			}
 
@@ -1204,7 +1204,7 @@ namespace LMWSelenium
 
 
 
-				Driver.Close();
+				Driver.Quit();
 
 			}
 		}
