@@ -674,7 +674,7 @@ namespace LMWSelenium
 
 				Search.CheckSearchButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 
 			}
 
@@ -691,7 +691,7 @@ namespace LMWSelenium
 
 				Home.TestSearchNavBarButton(Driver);
 
-				Driver.Close();
+				Driver.Quit();
 
 			}
 
@@ -711,7 +711,7 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 				Search.CheckProgrammingButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 
 
 			}
@@ -732,7 +732,7 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 				Search.CheckTestingButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 			}
 
 			[Test]
@@ -751,7 +751,7 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 				Search.CheckGamesButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 			}
 
 			[Test]
@@ -770,7 +770,7 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 				Search.CheckTwoDButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 			}
 
 			[Test]
@@ -789,7 +789,7 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 				Search.CheckThreeDButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 			}
 
 			[Test]
@@ -808,7 +808,7 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 				Search.BlogButtonPost();
 
-				Driver.Close();
+				Driver.Quit();
 			}
 
 			[Test]
@@ -823,7 +823,7 @@ namespace LMWSelenium
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLogoButton(Driver);
-				Driver.Close();
+				Driver.Quit();
 			}
 
 			[Test]
@@ -840,7 +840,7 @@ namespace LMWSelenium
 				HomePage Home = new HomePage(Driver);
 				Home.TestLinkedinButton(Driver);
 
-				Driver.Close();
+				Driver.Quit();
 			}
 		}
 	}
