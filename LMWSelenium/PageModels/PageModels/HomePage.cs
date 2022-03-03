@@ -51,6 +51,7 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestSearchNavBarButton(IWebDriver driver)
 		{
 			ClickButton(SearchNavBarButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search - Lewis Whittard Software Development");
 			
 		}
