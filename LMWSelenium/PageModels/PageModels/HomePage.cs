@@ -59,6 +59,7 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestProgrammingButton(IWebDriver driver)
 		{
 			ClickButton(ProgrammingButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 
 		}
@@ -66,30 +67,35 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestTestButton(IWebDriver driver)
 		{
 			ClickButton(TestingButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestGamesButton(IWebDriver driver)
 		{
 			ClickButton(GamesButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestTwoDAssetsButton(IWebDriver driver)
 		{
 			ClickButton(TwoDBAssetsButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestThreeDAssetsButton(IWebDriver driver)
 		{
 			ClickButton(ThreeDAssetsButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestBlogButton(IWebDriver driver)
 		{
 			ClickButton(BlogButton);
+			Wait(1000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
