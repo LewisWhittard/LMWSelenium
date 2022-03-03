@@ -75,12 +75,17 @@ namespace LMWSelenium.PageModels.StandardPage
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 			NavigateToPage(driver, "https://lewiswhittard.co.uk/PortfolioPiece?Id=0");
 			AssertAreEqual(driver.Title, "Portfolio Piece - Lewis Whittard Software Development");
-			CloseDriver(driver);
+			QuitDriver(driver);
 		}
 
 		public void CloseDriver(IWebDriver driver)
 		{
 			driver.Close();
+		}
+
+		public void QuitDriver(IWebDriver driver)
+		{
+			driver.Quit();
 		}
 		
 		public void AssertAreEqual(string valueOne, string valueTwo)
