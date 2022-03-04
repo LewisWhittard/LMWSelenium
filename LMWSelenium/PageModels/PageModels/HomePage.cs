@@ -51,7 +51,6 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestSearchNavBarButton(IWebDriver driver)
 		{
 			ClickButton(SearchNavBarButton);
-			Wait(1000);
 			AssertAreEqual(driver.Title, "Search - Lewis Whittard Software Development");
 			
 		}
@@ -59,7 +58,6 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestProgrammingButton(IWebDriver driver)
 		{
 			ClickButton(ProgrammingButton);
-			Wait(2000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 
 		}
@@ -67,35 +65,30 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestTestButton(IWebDriver driver)
 		{
 			ClickButton(TestingButton);
-			Wait(2000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestGamesButton(IWebDriver driver)
 		{
 			ClickButton(GamesButton);
-			Wait(2000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestTwoDAssetsButton(IWebDriver driver)
 		{
 			ClickButton(TwoDBAssetsButton);
-			Wait(2000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestThreeDAssetsButton(IWebDriver driver)
 		{
 			ClickButton(ThreeDAssetsButton);
-			Wait(2000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
 		public void TestBlogButton(IWebDriver driver)
 		{
 			ClickButton(BlogButton);
-			Wait(2000);
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -109,7 +102,6 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(Linkedin);
 			SwitchTab(driver, 1);
-			Wait(1000);
 			AssertContains(driver.Url, "https://www.linkedin.com/");
 			CloseDriver(driver);
 			SwitchTab(driver, 0);

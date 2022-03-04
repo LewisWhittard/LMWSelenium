@@ -126,10 +126,7 @@ namespace LMWSelenium.PageModels.StandardPage
 			driver.SwitchTo().Window(driver.WindowHandles[Tab]);
 		}
 
-		public void Wait(int value)
-		{
-			Thread.Sleep(value);
-		}
+		
 
 		public void AssertContains(string Value1,string Value2)
 		{
