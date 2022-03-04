@@ -10,6 +10,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Safari;
+using OpenQA.Selenium.Support.UI;
 
 namespace LMWSelenium.PageModels.StandardPage
 {
@@ -24,9 +25,13 @@ namespace LMWSelenium.PageModels.StandardPage
 		{
 			IWebElement ReturnElement;
 
-
+			
+			
 			try
 			{
+				var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3))
+						.Until(drv => drv.FindElement(By.Id(id)));
+
 				ReturnElement = driver.FindElement(By.Id(id));
 			}
 			catch (Exception)
