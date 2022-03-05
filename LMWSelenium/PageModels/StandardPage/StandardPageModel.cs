@@ -21,6 +21,13 @@ namespace LMWSelenium.PageModels.StandardPage
 			driver.Navigate().GoToUrl(url);
 		}
 
+		public void WaitUntilURLContainsValue(IWebDriver driver, string value)
+		{
+			var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5))
+						.Until(drv => drv.Url.Contains(value));
+
+		}
+
 		public IWebElement FindElementById(IWebDriver driver, string id)
 		{
 			IWebElement ReturnElement;
