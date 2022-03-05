@@ -127,6 +127,7 @@ namespace LMWSelenium.PageModels.PageModels
 			CheckSearchButtonPost();
 			ClickButton(SearchButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -147,6 +148,7 @@ namespace LMWSelenium.PageModels.PageModels
 			SendTextToInput(SearchBox, "no result");
 			ClickButton(SearchButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 			
 			
@@ -171,6 +173,7 @@ namespace LMWSelenium.PageModels.PageModels
 			ClickButton(BlogTickBox);
 			ClickButton(SearchButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -185,6 +188,7 @@ namespace LMWSelenium.PageModels.PageModels
 			ClickButton(BlogTickBox);
 			ClickButton(SearchButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 

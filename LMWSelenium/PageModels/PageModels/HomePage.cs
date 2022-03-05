@@ -52,6 +52,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(SearchNavBarButton);
 			WaitUntilURLContainsValue(driver, "search");
+			WaitUntilTitleContainsValue(driver, "Search");
 			AssertAreEqual(driver.Title, "Search - Lewis Whittard Software Development");
 			
 		}
@@ -60,6 +61,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(ProgrammingButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 
 		}
@@ -68,6 +70,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(TestingButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -75,6 +78,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(GamesButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -82,6 +86,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(TwoDBAssetsButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -89,6 +94,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(ThreeDAssetsButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
@@ -96,6 +102,7 @@ namespace LMWSelenium.PageModels.PageModels
 		{
 			ClickButton(BlogButton);
 			WaitUntilURLContainsValue(driver, "Modified");
+			WaitUntilTitleContainsValue(driver, "Modified");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
 		}
 
