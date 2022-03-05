@@ -136,6 +136,8 @@ namespace LMWSelenium.PageModels.PageModels
 			CheckSearchButtonPost();
 			IWebElement ResultButton = FindElementById(driver, "0Button");
 			ClickButton(ResultButton);
+			WaitUntilURLContainsValue(driver, "PortfolioPiece");
+			WaitUntilTitleContainsValue(driver, "Portfolio Piece");
 			AssertAreEqual(driver.Title, "Portfolio Piece - Lewis Whittard Software Development");
 
 		}
