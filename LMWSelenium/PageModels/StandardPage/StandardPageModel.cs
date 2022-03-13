@@ -23,14 +23,14 @@ namespace LMWSelenium.PageModels.StandardPage
 
 		public void WaitUntilURLContainsValue(IWebDriver driver, string value)
 		{
-			var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5))
+			var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10))
 						.Until(drv => drv.Url.Contains(value));
 
 		}
 
 		public void WaitUntilTitleContainsValue(IWebDriver driver, string value)
 		{
-			var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5))
+			var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10))
 						.Until(drv => drv.Title.Contains(value));
 
 		}
@@ -43,7 +43,7 @@ namespace LMWSelenium.PageModels.StandardPage
 			
 			try
 			{
-				var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3))
+				var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10))
 						.Until(drv => drv.FindElement(By.Id(id)));
 
 				ReturnElement = driver.FindElement(By.Id(id));
