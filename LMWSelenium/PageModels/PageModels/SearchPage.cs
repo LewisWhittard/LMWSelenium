@@ -50,6 +50,23 @@ namespace LMWSelenium.PageModels.PageModels
 			CheckTickBoxValueIsTrue(BlogTickBox);
 		}
 
+		public void CheckSearchButtonPostWait(IWebDriver driver)
+		{
+			FindElementById(driver, "Programming");
+			FindElementById(driver, "TwoDAssets");
+			FindElementById(driver, "ThreeDAssets");
+			FindElementById(driver, "Testing");
+			FindElementById(driver, "Games");
+			FindElementById(driver, "Blog");
+
+			CheckTickBoxValueIsTrue(ProgrammingTickBox);
+			CheckTickBoxValueIsTrue(TestingTickBox);
+			CheckTickBoxValueIsTrue(GamesTickBox);
+			CheckTickBoxValueIsTrue(ThreeDAssetsTickBox);
+			CheckTickBoxValueIsTrue(TwoDAssetsTickBox);
+			CheckTickBoxValueIsTrue(BlogTickBox);
+		}
+
 		public void CheckAllTickboxValuesAreFalse()
 		{
 			CheckTickBoxValueIsFalse(ProgrammingTickBox);
