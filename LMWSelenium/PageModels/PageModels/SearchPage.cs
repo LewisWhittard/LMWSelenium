@@ -52,12 +52,12 @@ namespace LMWSelenium.PageModels.PageModels
 
 		public void CheckSearchButtonPostWait(IWebDriver driver)
 		{
-			FindElementById(driver, "Programming");
-			FindElementById(driver, "TwoDAssets");
-			FindElementById(driver, "ThreeDAssets");
-			FindElementById(driver, "Testing");
-			FindElementById(driver, "Games");
-			FindElementById(driver, "Blog");
+			ProgrammingTickBox = FindElementById(driver, "Programming");
+			TwoDAssetsTickBox = FindElementById(driver, "TwoDAssets");
+			ThreeDAssetsTickBox = FindElementById(driver, "ThreeDAssets");
+			TestingTickBox = FindElementById(driver, "Testing");
+			GamesTickBox = FindElementById(driver, "Games");
+			BlogTickBox = FindElementById(driver, "Blog");
 
 			CheckTickBoxValueIsTrue(ProgrammingTickBox);
 			CheckTickBoxValueIsTrue(TestingTickBox);
