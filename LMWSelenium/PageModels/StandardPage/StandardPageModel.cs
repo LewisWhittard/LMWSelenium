@@ -11,6 +11,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Safari;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Support;
 
 namespace LMWSelenium.PageModels.StandardPage
 {
@@ -156,6 +157,13 @@ namespace LMWSelenium.PageModels.StandardPage
 				throw new InvalidOperationException("Does not Contain");
 			}
 			
+		}
+
+		public void WaitUntilElementIsStale(IWebDriver driver, IWebElement element)
+		{
+			WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+			// do something that changes state of pageElement
+			wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.StalenessOf(element));
 		}
 
 	}

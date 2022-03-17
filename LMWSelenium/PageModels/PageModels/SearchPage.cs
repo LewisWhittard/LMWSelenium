@@ -201,6 +201,15 @@ namespace LMWSelenium.PageModels.PageModels
 			DontFindElementById(driver, "0Button");
 		}
 
+		public void CheckAllTickBoxesAreStale(IWebDriver driver)
+		{
+			WaitUntilElementIsStale(driver, ProgrammingTickBox);
+			WaitUntilElementIsStale(driver, TestingTickBox);
+			WaitUntilElementIsStale(driver, GamesTickBox);
+			WaitUntilElementIsStale(driver, ThreeDAssetsTickBox);
+			WaitUntilElementIsStale(driver, TwoDAssetsTickBox);
+			WaitUntilElementIsStale(driver, BlogTickBox);
+		}
 		
 
 	}

@@ -1196,6 +1196,8 @@ namespace LMWSelenium
 
 				SearchPage Search = new SearchPage(Driver);
 
+				Search.CheckAllTickBoxesAreStale(Driver);
+
 				Search.SearchTestAllTickBoxesTrue(Driver);
 
 				SearchPage SearchPost = new SearchPage(Driver);
