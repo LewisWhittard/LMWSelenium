@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Safari;
 using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium.Support;
+using SeleniumExtras.WaitHelpers;
 
 namespace LMWSelenium.PageModels.StandardPage
 {
@@ -162,8 +153,7 @@ namespace LMWSelenium.PageModels.StandardPage
 		public void WaitUntilElementIsStale(IWebDriver driver, IWebElement element)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-			// do something that changes state of pageElement
-			wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.StalenessOf(element));
+			wait.Until(ExpectedConditions.StalenessOf(element));
 		}
 
 	}

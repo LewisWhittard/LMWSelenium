@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using LMWSelenium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
@@ -7,7 +6,6 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Safari;
 using LMWSelenium.PageModels.PageModels;
 using LMWSelenium.PageModels.StandardPage;
-using System.Collections.Generic;
 
 namespace LMWSelenium
 {
@@ -928,6 +926,8 @@ namespace LMWSelenium
 				
 				Search.SearchTestAllTickBoxesTrue(Driver);
 
+				Search.CheckAllTickBoxesAreStale(Driver);
+
 				SearchPage SearchPost = new SearchPage(Driver);
 				
 				SearchPost.SearchTestAllTickBoxesTrueResultPost(Driver);
@@ -1018,6 +1018,8 @@ namespace LMWSelenium
 
 				Search.SearchTestAllTickBoxesTrue(Driver);
 
+				Search.CheckAllTickBoxesAreStale(Driver);
+
 				SearchPage SearchPost = new SearchPage(Driver);
 
 				SearchPost.SearchTestAllTickBoxesTrueResultPost(Driver);
@@ -1107,6 +1109,8 @@ namespace LMWSelenium
 				SearchPage Search = new SearchPage(Driver);
 
 				Search.SearchTestAllTickBoxesTrue(Driver);
+
+				Search.CheckAllTickBoxesAreStale(Driver);
 
 				SearchPage SearchPost = new SearchPage(Driver);
 
