@@ -1195,10 +1195,10 @@ namespace LMWSelenium
 				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/search/modified");
 
 				SearchPage Search = new SearchPage(Driver);
+				
+				Search.SearchTestAllTickBoxesTrue(Driver);
 
 				Search.CheckAllTickBoxesAreStale(Driver);
-
-				Search.SearchTestAllTickBoxesTrue(Driver);
 
 				SearchPage SearchPost = new SearchPage(Driver);
 
