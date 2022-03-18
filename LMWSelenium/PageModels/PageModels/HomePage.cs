@@ -103,11 +103,10 @@ namespace LMWSelenium.PageModels.PageModels
 		public void TestLinkedinButton(IWebDriver driver)
 		{
 			ClickButton(Linkedin);
-			SwitchTab(driver, 1);
-			WaitUntilURLContainsValue(driver, "https://www.linkedin.com/");
-			AssertContains(driver.Url, "https://www.linkedin.com/");
 			CloseDriver(driver);
 			SwitchTab(driver, 0);
+			WaitUntilURLContainsValue(driver, "https://www.linkedin.com/");
+			AssertContains(driver.Url, "https://www.linkedin.com/");
 		}
 
 	}
