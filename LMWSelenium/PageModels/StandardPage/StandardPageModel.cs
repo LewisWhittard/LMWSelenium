@@ -101,7 +101,7 @@ namespace LMWSelenium.PageModels.StandardPage
 		
 		public void AssertAreEqual(string valueOne, string valueTwo)
 		{
-			Assert.AreEqual(valueOne, valueTwo);
+			Assert.Equals(valueOne, valueTwo);
 		}
 
 		public void ClickButton(IWebElement button)
