@@ -1,5 +1,4 @@
 ﻿using System;
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -101,8 +100,13 @@ namespace LMWSelenium.PageModels.StandardPage
 		
 		public void AssertAreEqual(string valueOne, string valueTwo)
 		{
-			Assert.Equals(valueOne, valueTwo);
-		}
+			if (valueOne != valueTwo)
+            { 
+				throw new InvalidOperationException("Values are not equal");
+            }
+
+
+        }
 
 		public void ClickButton(IWebElement button)
 		{
