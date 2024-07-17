@@ -90,7 +90,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -111,7 +111,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -129,7 +129,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestProgrammingButton(Driver);
@@ -150,7 +150,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTestButton(Driver);
@@ -169,7 +169,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestGamesButton(Driver);
@@ -188,7 +188,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTwoDAssetsButton(Driver);
@@ -207,7 +207,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestThreeDAssetsButton(Driver);
@@ -226,7 +226,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestBlogButton(Driver);
@@ -245,7 +245,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLogoButton(Driver);
@@ -261,7 +261,7 @@ namespace LMWSelenium
 
 
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLinkedinButton(Driver);
@@ -281,7 +281,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -302,7 +302,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -320,7 +320,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestProgrammingButton(Driver);
@@ -341,7 +341,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTestButton(Driver);
@@ -360,7 +360,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestGamesButton(Driver);
@@ -379,7 +379,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTwoDAssetsButton(Driver);
@@ -398,7 +398,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestThreeDAssetsButton(Driver);
@@ -417,7 +417,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestBlogButton(Driver);
@@ -436,7 +436,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLogoButton(Driver);
@@ -452,7 +452,7 @@ namespace LMWSelenium
 
 
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLinkedinButton(Driver);
@@ -471,7 +471,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -492,7 +492,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -510,7 +510,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestProgrammingButton(Driver);
@@ -531,7 +531,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTestButton(Driver);
@@ -550,7 +550,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestGamesButton(Driver);
@@ -569,7 +569,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTwoDAssetsButton(Driver);
@@ -588,7 +588,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestThreeDAssetsButton(Driver);
@@ -607,7 +607,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestBlogButton(Driver);
@@ -626,7 +626,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLogoButton(Driver);
@@ -642,7 +642,7 @@ namespace LMWSelenium
 
 
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLinkedinButton(Driver);
@@ -662,7 +662,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -683,7 +683,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 
@@ -701,7 +701,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestProgrammingButton(Driver);
@@ -722,7 +722,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTestButton(Driver);
@@ -741,7 +741,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestGamesButton(Driver);
@@ -760,7 +760,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestTwoDAssetsButton(Driver);
@@ -779,7 +779,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestThreeDAssetsButton(Driver);
@@ -798,7 +798,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestBlogButton(Driver);
@@ -817,7 +817,7 @@ namespace LMWSelenium
 
 				StandardPageModel PageModel = new StandardPageModel();
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLogoButton(Driver);
@@ -833,7 +833,7 @@ namespace LMWSelenium
 
 
 
-				PageModel.NavigateToPage(Driver, "https://www.lewiswhittard.co.uk");
+				PageModel.NavigateToPage(Driver, "https://lewiswhittard.co.uk/");
 
 				HomePage Home = new HomePage(Driver);
 				Home.TestLinkedinButton(Driver);
