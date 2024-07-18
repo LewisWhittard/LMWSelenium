@@ -77,13 +77,13 @@ namespace LMWSelenium.PageModels.StandardPage
 
 		public void SmokeTestLogic(IWebDriver driver)
 		{
-			NavigateToPage(driver, "https://www.lewiswhittard.co.uk");
+			NavigateToPage(driver, "https://lewiswhittard.co.uk/search");
 			AssertAreEqual(driver.Title, "Home Page - Lewis Whittard Software Development");
-			NavigateToPage(driver, "https://www.lewiswhittard.co.uk/search");
+			NavigateToPage(driver, "https://lewiswhittard.co.uk/search");
 			AssertAreEqual(driver.Title, "Search - Lewis Whittard Software Development");
-			NavigateToPage(driver, "https://lewiswhittard.co.uk/Search/Modified");
+			NavigateToPage(driver, "https://lewiswhittard.co.uk/search");
 			AssertAreEqual(driver.Title, "Search Modified - Lewis Whittard Software Development");
-			NavigateToPage(driver, "https://lewiswhittard.co.uk/PortfolioPiece?Id=0");
+			NavigateToPage(driver, "https://lewiswhittard.co.uk/searchPortfolioPiece?Id=0");
 			AssertAreEqual(driver.Title, "Portfolio Piece - Lewis Whittard Software Development");
 			QuitDriver(driver);
 		}
